@@ -4,66 +4,84 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Zaynab Taha | Portfolio</title>
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;300;400;500;700;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
-
-  <!-- Bootstrap Icons -->
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-
-  <!-- Your CSS -->
-  <link rel="stylesheet" href="design.css">
 </head>
 <body>
+
   <!-- Navbar -->
   <nav class="navbar">
     <ul class="nav-links">
-      <li><a href="#projects">Projects</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
-  <section class="hero" id="about">
+  <!-- Hero / About Section -->
+  <section id="about" class="hero">
+    <div class="hero-image">
+      <img src="aiease_1757344123203.jpg" alt="Zaynab Taha">
+    </div>
     <div class="hero-text">
       <h1>Hello!</h1>
-      <h2>I'm Zaynab Taha, <span class="words">
-        <span class="word">an IT Professional</span>
-        <span class="word">an AI Enthusiast</span>
-        <span class="word">a UI/UX Designer</span>
-        <span class="word">a Mobile Developer</span>
-      </span></h2>
-     <div class="hero-links">
-  <a href="https://www.linkedin.com/in/zaynab-taha/" target="_blank" data-tooltip="LinkedIn"><i class="bi bi-linkedin"></i></a>
-  <a href="mailto:zay.taha@gmail.com" data-tooltip="Email"><i class="bi bi-envelope"></i></a>
-  <a href="https://wa.me/966580437821" target="_blank" data-tooltip="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-  <a href="https://github.com/ztaha121" target="_blank" data-tooltip="GitHub"><i class="bi bi-github"></i></a>
-</div>
-
-    </div>
-    <div class="hero-image">
-      <img src="rename.jpg" alt="Zaynab Taha">
+      <h2>
+        I'm Zaynab Othman Taha,
+        <span class="words">
+          <span class="word">an IT Professional</span>
+          <span class="word">an AI Enthusiast</span>
+          <span class="word">a UI/UX Designer</span>
+          <span class="word">a Mobile Developer</span>
+        </span>
+      </h2>
+      <div class="hero-links">
+        <a href="https://www.linkedin.com/in/zaynab-taha/" target="_blank" data-tooltip="LinkedIn">
+          <i class="bi bi-linkedin"></i>
+        </a>
+        <a href="https://github.com/zaynabot" target="_blank" data-tooltip="GitHub">
+          <i class="bi bi-github"></i>
+        </a>
+        <a href="mailto:zay.taha@gmail.com" data-tooltip="Email">
+          <i class="bi bi-envelope"></i>
+        </a>
+        <a href="https://wa.me/966580437821" target="_blank" data-tooltip="WhatsApp">
+          <i class="bi bi-whatsapp"></i>
+        </a>
+      </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
+  <!-- Projects -->
   <section id="projects">
-    <h3>Featured Projects</h3>
+    <h3 class="section-title">Featured Projects</h3>
     <div class="project-container">
-      <!-- Project cards will go here -->
+      <div class="project-card">
+        <img src="assets/img/project1.png" alt="Credential Verification System">
+        <h4>Credential Verification System</h4>
+        <p>Secure system for healthcare professionals using Node.js, Flutter & MongoDB.</p>
+        <a href="https://github.com/zaynabot/credential-system" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/img/project2.png" alt="AI Chatbot">
+        <h4>AI Chatbot</h4>
+        <p>Intelligent chatbot answering healthcare queries with NLP.</p>
+        <a href="https://github.com/zaynabot/ai-chatbot" target="_blank">View on GitHub</a>
+      </div>
+      <div class="project-card">
+        <img src="assets/img/project3.png" alt="Portfolio Website">
+        <h4>Portfolio Website</h4>
+        <p>Responsive personal portfolio built with HTML, CSS & JS.</p>
+        <a href="https://github.com/zaynabot/portfolio" target="_blank">View on GitHub</a>
+      </div>
     </div>
   </section>
 
-  <!-- Contact Section -->
+  <!-- Contact -->
   <section id="contact">
     <h3>Contact Me</h3>
-    <p>Email me at <a href="mailto:zay.taha@gmail.com">zay.taha@gmail.com</a></p>
+    <p>Feel free to reach out via email: <a href="mailto:zay.taha@gmail.com">zay.taha@gmail.com</a></p>
   </section>
 
-  <!-- Your JS -->
-  <script src="main.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
