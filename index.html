@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zaynab Taha | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <title>Zaynab Othman Taha | Portfolio</title>
+  <link rel="stylesheet" href="design.css">
+  <!-- Bootstrap Icons (for social links) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
 </head>
+
 <body>
 
   <!-- Navbar -->
@@ -18,70 +21,69 @@
     </ul>
   </nav>
 
-  <!-- Hero / About Section -->
-  <section id="about" class="hero">
-    <div class="hero-image">
-      <img src="aiease_1757344123203.jpg" alt="Zaynab Taha">
-    </div>
-    <div class="hero-text">
-      <h1>Hello!</h1>
+  <!-- Hero / Intro Section -->
+  <section class="portfolio-intro" id="about">
+    <div class="intro-text">
+      <h1>Hello! I'm Zaynab Othman Taha</h1>
       <h2>
-        I'm Zaynab Othman Taha,
-        <span class="words">
-          <span class="word">an IT Professional</span>
-          <span class="word">an AI Enthusiast</span>
-          <span class="word">a UI/UX Designer</span>
-          <span class="word">a Mobile Developer</span>
+        <span class="animated-words">
+          <span>IT Professional</span>
+          <span>AI Enthusiast</span>
+          <span>Full-Stack Developer</span>
+          <span>Cloud & Security Specialist</span>
         </span>
       </h2>
-      <div class="hero-links">
-        <a href="https://www.linkedin.com/in/zaynab-taha/" target="_blank" data-tooltip="LinkedIn">
-          <i class="bi bi-linkedin"></i>
-        </a>
-        <a href="https://github.com/zaynabot" target="_blank" data-tooltip="GitHub">
-          <i class="bi bi-github"></i>
-        </a>
-        <a href="mailto:zay.taha@gmail.com" data-tooltip="Email">
-          <i class="bi bi-envelope"></i>
-        </a>
-        <a href="https://wa.me/966580437821" target="_blank" data-tooltip="WhatsApp">
-          <i class="bi bi-whatsapp"></i>
-        </a>
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/ztaha121" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/966580437821" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+        <a href="mailto:zay.taha@gmail.com" target="_blank" title="Email"><i class="bi bi-envelope"></i></a>
+        <a href="https://github.com/ztaha121" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
       </div>
+    </div>
+
+    <div class="intro-image">
+      <img src="profile.jpg" alt="Zaynab Othman Taha">
     </div>
   </section>
 
-  <!-- Projects -->
-  <section id="projects">
-    <h3 class="section-title">Featured Projects</h3>
-    <div class="project-container">
-      <div class="project-card">
-        <img src="assets/img/project1.png" alt="Credential Verification System">
-        <h4>Credential Verification System</h4>
-        <p>Secure system for healthcare professionals using Node.js, Flutter & MongoDB.</p>
-        <a href="https://github.com/zaynabot/credential-system" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img/project2.png" alt="AI Chatbot">
-        <h4>AI Chatbot</h4>
-        <p>Intelligent chatbot answering healthcare queries with NLP.</p>
-        <a href="https://github.com/zaynabot/ai-chatbot" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <img src="assets/img/project3.png" alt="Portfolio Website">
-        <h4>Portfolio Website</h4>
-        <p>Responsive personal portfolio built with HTML, CSS & JS.</p>
-        <a href="https://github.com/zaynabot/portfolio" target="_blank">View on GitHub</a>
-      </div>
+  <!-- Featured Projects -->
+  <section class="project-container" id="projects">
+    <div class="project-card">
+      <img src="project1.jpg" alt="Project 1">
+      <h4>Healthcare Credential Verification System</h4>
+      <p>Flutter, Node.js, MongoDB project for streamlining healthcare credential verification.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="project2.jpg" alt="Project 2">
+      <h4>AI Chatbot</h4>
+      <p>Interactive AI chatbot using Python and machine learning algorithms.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="project3.jpg" alt="Project 3">
+      <h4>Portfolio Website</h4>
+      <p>Personal portfolio website showcasing projects, skills, and contact info.</p>
     </div>
   </section>
 
-  <!-- Contact -->
+  <!-- Contact Section -->
   <section id="contact">
-    <h3>Contact Me</h3>
-    <p>Feel free to reach out via email: <a href="mailto:zay.taha@gmail.com">zay.taha@gmail.com</a></p>
+    <h2>Get in Touch</h2>
+    <p>Email: <a href="mailto:zay.taha@gmail.com">zay.taha@gmail.com</a></p>
+    <p>Phone: +966 580437821</p>
   </section>
 
-  <script src="script.js"></script>
+  <!-- Optional JS for smooth scrolling -->
+  <script>
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(link.getAttribute('href'));
+        target.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+  </script>
+
 </body>
 </html>
