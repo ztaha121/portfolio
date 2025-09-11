@@ -207,7 +207,16 @@ filterButtons.forEach(button => {
 
 // ===== Optional: Show all skills by default =====
 document.querySelector('[data-category="all"]')?.click();
+// Use IntersectionObserver
+const sections = document.querySelectorAll('.skills-section, .projects');
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) entry.target.classList.add('fade-in');
+  });
+});
+sections.forEach(section => observer.observe(section));
 
   </script>
+  <script src="main.js?v=2"></script>
 </body>
 </html>
