@@ -1,52 +1,54 @@
-// Smooth scroll for navbar links
-document.querySelectorAll('.nav-links a').forEach(link => {
-  link.addEventListener('click', e => {
-    e.preventDefault();
-    const target = document.querySelector(link.getAttribute('href'));
-    target.scrollIntoView({ behavior: 'smooth' });
-  });
-});
-
-// Shadow effect on scroll
+// Navbar scroll effect
 window.addEventListener('scroll', () => {
-  const nav = document.querySelector('.navbar');
-  if (window.scrollY > 50) nav.classList.add('scrolled');
-  else nav.classList.remove('scrolled');
+  const navbar = document.querySelector('.navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
 });
 
-// Rotating hero words
-const words = [
-  "an IT Professional",
-  "an AI Enthusiast",
-  "a UI/UX Designer",
-  "a Mobile Developer"
+// Animated roles
+const roles = [
+  { text: "UI/UX Designer", color: "#FF6B6B" },
+  { text: "Web Developer", color: "#6BCB77" },
+  { text: "Honeywell Intern", color: "#4D96FF" },
+  { text: "AI Enthusiast", color: "#FFD93D" },
+  { text: "IT Professional", color: "#9B59B6" }
 ];
 
-const colors = ["#f9e900", "#48a9a6", "#84dccc", "#070707"];
-
-const container = document.querySelectorAll(".animated-words span");
+const roleElement = document.getElementById("animated-role");
 let index = 0;
 
-function rotateWords() {
-  container.forEach((el, i) => {
-    el.style.opacity = "0";
-    el.style.transform = "translateY(100%)";
-  });
-  container[index].style.opacity = "1";
-  container[index].style.transform = "translateY(0)";
-  container[index].style.color = colors[index];
-  index = (index + 1) % container.length;
+function changeRole() {
+  roleElement.textContent = roles[index].text;
+  roleElement.style.color = roles[index].color;
+  index = (index + 1) % roles.length;
 }
 
-// Rotate every 2 seconds
-setInterval(rotateWords, 2000);
+setInterval(changeRole, 2000);
 
-// Initial call to display the first word
-rotateWords();
-    document.querySelectorAll('.nav-links a').forEach(link => {
-      link.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute('href'));
-        target.scrollIntoView({ behavior: 'smooth' });
-      });
-    });
+// Dark mode toggle
+const darkModeToggle = document.getElementById('darkModeToggle');
+const toggleIcon = document.getElementById('toggleIcon');
+
+// Initialize icon based on current body class
+if (document.body.classList.contains('dark-mode')) {
+  toggleIcon.classList.remove('bi-toggle-off');
+  toggleIcon.classList.add('bi-toggle-on');
+} else {
+  toggleIcon.classList.remove('bi-toggle-on');
+  toggleIcon.classList.add('bi-toggle-off');
+}
+
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+
+  if(document.body.classList.contains('dark-mode')) {
+    toggleIcon.classList.remove('bi-toggle-off');
+    toggleIcon.classList.add('bi-toggle-on');
+  } else {
+    toggleIcon.classList.remove('bi-toggle-on');
+    toggleIcon.classList.add('bi-toggle-off');
+  }
+});

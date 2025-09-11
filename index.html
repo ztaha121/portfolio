@@ -1,80 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Zaynab Othman Taha | Portfolio</title>
+  <title>Zaynab Othman Taha - Portfolio</title>
   <link rel="stylesheet" href="design.css">
-  <link rel="stylesheet" href="main.js">
-  <!-- Bootstrap Icons (for social links) -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="249.png">
+
 </head>
-
 <body>
-
   <!-- Navbar -->
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="#about">About</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+  <header class="navbar">
+    <nav class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <!-- Dark mode toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+      <i class="bi bi-toggle-off" id="toggleIcon"></i>
+    </div>
+  </header>
 
-  <!-- Hero / Intro Section -->
-  <section class="portfolio-intro" id="about">
-    <div class="intro-text">
-      <h1>Hello! I'm Zaynab Othman Taha</h1>
-      <h2>
-        <span class="animated-words">
-          <span>IT Professional</span>
-          <span>AI Enthusiast</span>
-          <span>Full-Stack Developer</span>
-          <span>Cloud & Security Specialist</span>
-        </span>
-      </h2>
-      <div class="social-links">
-        <a href="https://www.linkedin.com/in/ztaha121" target="_blank" title="LinkedIn"><i class="bi bi-linkedin"></i></a>
-        <a href="https://wa.me/966580437821" target="_blank" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-        <a href="mailto:zay.taha@gmail.com" target="_blank" title="Email"><i class="bi bi-envelope"></i></a>
-        <a href="https://github.com/ztaha121" target="_blank" title="GitHub"><i class="bi bi-github"></i></a>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-image"></div>
+    <div class="hero-content">
+      <h1>Hi! I'm Zaynab Othman Taha</h1>
+      <h2>I am a <span id="animated-role">IT Professional</span></h2>
+
+      <!-- Contact icons -->
+      <div class="contact-info">
+        <a href="mailto:zay.taha@gmail.com" target="_blank" class="contact-icon email"><i class="bi bi-envelope-open-heart"></i></a>
+        <a href="https://github.com/ztaha121/" target="_blank" class="contact-icon github"><i class="bi bi-github"></i></a>
+        <a href="https://wa.me/966580437821" target="_blank" class="contact-icon whatsapp"><i class="bi bi-whatsapp"></i></a>
+        <a href="https://linkedin.com/in/zaynab-taha" target="_blank" class="contact-icon linkedin"><i class="bi bi-linkedin"></i></a>
+      </div>
+    </div>
+  </section>
+  <section id="skills" class="skills-section">
+  <h2 class="section-title">My Skills</h2>
+
+  <!-- Filter Buttons -->
+  <div class="filter-buttons">
+    <button data-category="programming">Programming & Dev</button>
+    <button data-category="ai">AI & Data</button>
+    <button data-category="network">Networking & Security</button>
+    <button data-category="tools">Tools & Platforms</button>
+    <button data-category="cloud">Cloud & Systems</button>
+  </div>
+
+  <!-- Skills Container -->
+  <div class="skills-container">
+    <!-- Programming & Dev -->
+    <span class="skill-bubble programming" title="Python programming language, used for scripting, ML, and web apps">Python</span>
+    <span class="skill-bubble programming" title="JavaScript for web apps and interactive interfaces">JavaScript</span>
+    <span class="skill-bubble programming" title="C# programming language, desktop and web apps">C#</span>
+    <span class="skill-bubble programming" title="HTML & CSS for building web pages">HTML/CSS</span>
+    <span class="skill-bubble programming" title="Flutter for cross-platform mobile apps">Flutter</span>
+    <span class="skill-bubble programming" title="Node.js for backend development">Node.js</span>
+    <span class="skill-bubble programming" title="ASP.NET web framework">ASP.NET</span>
+    <span class="skill-bubble programming" title="Android development">Android</span>
+
+    <!-- AI & Data -->
+    <span class="skill-bubble ai" title="Machine learning algorithms and models">Machine Learning</span>
+    <span class="skill-bubble ai" title="Data analysis with Python libraries">scikit-learn</span>
+    <span class="skill-bubble ai" title="Data mining techniques for insights">Data Mining</span>
+
+    <!-- Networking & Security -->
+    <span class="skill-bubble network" title="Cisco networking fundamentals">Cisco Networking</span>
+    <span class="skill-bubble network" title="Network management and monitoring">Network Management</span>
+    <span class="skill-bubble network" title="Cybersecurity principles and best practices">Cybersecurity</span>
+    <span class="skill-bubble network" title="IT ticketing systems">IT Ticketing</span>
+
+    <!-- Tools & Platforms -->
+    <span class="skill-bubble tools" title="Version control with Git/GitHub">Git/GitHub</span>
+    <span class="skill-bubble tools" title="UI/UX Design tools">UI/UX Design</span>
+    <span class="skill-bubble tools" title="VirtualBox virtualization software">VirtualBox</span>
+    <span class="skill-bubble tools" title="ServiceNow platform">ServiceNow</span>
+
+    <!-- Cloud & Systems -->
+    <span class="skill-bubble cloud" title="AWS cloud services">AWS Academy</span>
+    <span class="skill-bubble cloud" title="Windows Server Administration">Windows Server</span>
+    <span class="skill-bubble cloud" title="Active Directory">Active Directory</span>
+    <span class="skill-bubble cloud" title="Virtualization concepts">Virtualization</span>
+  </div>
+</section>
+
+</section>
+<!-- Featured Projects Section -->
+<section id="projects" class="projects">
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="projects-grid">
+
+    <!-- Project Card 1 -->
+    <div class="project-card">
+      <img src="project1.jpg" alt="Project 1" class="project-image">
+      <div class="project-content">
+        <h3>Credential Verification System</h3>
+        <p>A secure platform built with Flutter, Node.js, and MongoDB to streamline healthcare credential verification.</p>
+        <a href="https://github.com/yourusername/project1" target="_blank" class="project-link">View Project</a>
       </div>
     </div>
 
-    <div class="intro-image">
-      <img src="profile.jpg" alt="Zaynab Othman Taha">
-    </div>
-  </section>
-
-  <!-- Featured Projects -->
-  <section class="project-container" id="projects">
+    <!-- Project Card 2 -->
     <div class="project-card">
-      <img src="project1.jpg" alt="Project 1">
-      <h4>Healthcare Credential Verification System</h4>
-      <p>Flutter, Node.js, MongoDB project for streamlining healthcare credential verification.</p>
+      <img src="project2.jpg" alt="Project 2" class="project-image">
+      <div class="project-content">
+        <h3>AI Chat Assistant</h3>
+        <p>An AI-powered chatbot built using Python and NLP to provide real-time responses and insights.</p>
+        <a href="https://github.com/yourusername/project2" target="_blank" class="project-link">View Project</a>
+      </div>
     </div>
 
+    <!-- Project Card 3 -->
     <div class="project-card">
-      <img src="project2.jpg" alt="Project 2">
-      <h4>AI Chatbot</h4>
-      <p>Interactive AI chatbot using Python and machine learning algorithms.</p>
+      <img src="project3.jpg" alt="Project 3" class="project-image">
+      <div class="project-content">
+        <h3>Portfolio Website</h3>
+        <p>A fully responsive personal portfolio showcasing skills, projects, and contact info with dark mode toggle.</p>
+        <a href="https://github.com/yourusername/project3" target="_blank" class="project-link">View Project</a>
+      </div>
     </div>
 
-    <div class="project-card">
-      <img src="project3.jpg" alt="Project 3">
-      <h4>Portfolio Website</h4>
-      <p>Personal portfolio website showcasing projects, skills, and contact info.</p>
-    </div>
-  </section>
+  </div>
+</section>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Get in Touch</h2>
-    <p>Email: <a href="mailto:zay.taha@gmail.com">zay.taha@gmail.com</a></p>
-    <p>Phone: +966 580437821</p>
-  </section>
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 Zaynab Othman Taha. All rights reserved.</p>
+  </footer>
 
+  <!-- Scripts -->
+  <script>
+    // ===== Navbar Scroll Effect =====
+window.addEventListener('scroll', () => {
+  const navbar = document.querySelector('.navbar');
+  navbar.classList.toggle('scrolled', window.scrollY > 50);
+});
 
+// ===== Animated Roles =====
+const roles = [
+  { text: "UI/UX Designer", color: "#FF6B6B" },
+  { text: "Web Developer", color: "#6BCB77" },
+  { text: "Honeywell Intern", color: "#4D96FF" },
+  { text: "AI Enthusiast", color: "#FFD93D" },
+  { text: "IT Professional", color: "#9B59B6" }
+];
+
+const roleElement = document.getElementById("animated-role");
+let index = 0;
+
+function changeRole() {
+  roleElement.textContent = roles[index].text;
+  roleElement.style.color = roles[index].color;
+  index = (index + 1) % roles.length;
+}
+
+setInterval(changeRole, 2000);
+
+// ===== Dark Mode Toggle =====
+const darkModeToggle = document.getElementById('darkModeToggle');
+const toggleIcon = document.getElementById('toggleIcon');
+
+// Initialize toggle icon based on current mode
+toggleIcon.classList.toggle('bi-toggle-on', document.body.classList.contains('dark-mode'));
+toggleIcon.classList.toggle('bi-toggle-off', !document.body.classList.contains('dark-mode'));
+
+darkModeToggle.addEventListener('click', () => {
+  document.body.classList.toggle('dark-mode');
+  toggleIcon.classList.toggle('bi-toggle-on');
+  toggleIcon.classList.toggle('bi-toggle-off');
+});
+
+// ===== Skills Filtering with Active Button =====
+const filterButtons = document.querySelectorAll('.filter-buttons button');
+const skillBubbles = document.querySelectorAll('.skill-bubble');
+
+// Hide all bubbles initially
+skillBubbles.forEach(bubble => bubble.style.display = 'none');
+
+filterButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const category = button.getAttribute('data-category');
+
+    // Highlight active button
+    filterButtons.forEach(btn => btn.classList.remove('active'));
+    button.classList.add('active');
+
+    // Show only the selected category
+    skillBubbles.forEach(bubble => {
+      bubble.classList.remove('show'); // remove previous fade-in
+      if (bubble.classList.contains(category)) {
+        bubble.style.display = 'inline-block';
+        setTimeout(() => bubble.classList.add('show'), 50); // small delay for smooth fade
+      } else {
+        bubble.style.display = 'none';
+      }
+    });
+  });
+});
+
+// ===== Optional: Show all skills by default =====
+document.querySelector('[data-category="all"]')?.click();
+
+  </script>
 </body>
 </html>
