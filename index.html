@@ -52,31 +52,31 @@
 
     <!-- Project Card 1 -->
     <div class="project-card">
-      <img src="project1.jpg" alt="Project 1" class="project-image">
+      <img src="Healthcare Credential Verification.png" alt="Healthcare Credential Verification" class="project-image">
       <div class="project-content">
         <h3>Credential Verification System</h3>
         <p>A secure platform built with Flutter, Node.js, and MongoDB to streamline healthcare credential verification.</p>
-        <a href="https://github.com/yourusername/project1" target="_blank" class="project-link">View Project</a>
+        <a href="https://github.com/ztaha121/hospital-HVS" target="_blank" class="project-link">View on GitHub</a>
       </div>
     </div>
 
     <!-- Project Card 2 -->
     <div class="project-card">
-      <img src="project2.jpg" alt="Project 2" class="project-image">
+      <img src="n8n.png" alt="AI Chat Assistant" class="project-image">
       <div class="project-content">
         <h3>AI Chat Assistant</h3>
-        <p>An AI-powered chatbot built using Python and NLP to provide real-time responses and insights.</p>
-        <a href="https://github.com/yourusername/project2" target="_blank" class="project-link">View Project</a>
+        <p>An AI orchestrated workflow built with Python and NLP that ingests emails from Gmail leverages OpenAI to classify prioritize and automate inbox management</p>
+        <a href="https://github.com/ztaha121" target="_blank" class="project-link">View on GitHub</a>
       </div>
     </div>
 
     <!-- Project Card 3 -->
     <div class="project-card">
-      <img src="project3.jpg" alt="Project 3" class="project-image">
+      <img src="jup.jpg" alt="Jupyter Notebook Project" class="project-image">
       <div class="project-content">
-        <h3>Portfolio Website</h3>
-        <p>A fully responsive personal portfolio showcasing skills, projects, and contact info with dark mode toggle.</p>
-        <a href="https://github.com/yourusername/project3" target="_blank" class="project-link">View Project</a>
+        <h3>Data Analysis Notebook</h3>
+        <p>Jupyter Notebook presenting an Iris classification model using Python and Pandas, featuring comprehensive data analysis, clear visualizations, and insightful interpretation of the Iris dataset.</p>
+        <a href="https://github.com/ztaha121/iris-classifier/blob/main/iris.ipynb" target="_blank" class="project-link">View on GitHub</a>
       </div>
     </div>
 
@@ -92,6 +92,14 @@
     <button data-category="network">Networking & Security</button>
     <button data-category="tools">Tools & Platforms</button>
     <button data-category="cloud">Cloud & Systems</button>
+  </div>
+
+  <!-- Animated Laptop Display -->
+  <div class="laptop-animation" id="laptopAnimation">
+    <div class="laptop-screen">
+      <div class="screen-content" id="screenContent"></div>
+    </div>
+    <div class="laptop-base"></div>
   </div>
 
   <!-- Skills Container -->
@@ -130,6 +138,7 @@
     <span class="skill-bubble cloud" title="Virtualization concepts">Virtualization</span>
   </div>
 </section>
+
   <!-- Footer -->
   <footer class="footer">
     <p>&copy; 2025 Zaynab Othman Taha. All rights reserved.</p>
@@ -217,6 +226,53 @@ const observer = new IntersectionObserver(entries => {
 sections.forEach(section => observer.observe(section));
 
   </script>
+  
+<script>
+  // ===== Laptop Interactive Skills =====
+  const skills = {
+    programming: ['Python','JavaScript','C#','HTML/CSS','Flutter','Node.js','ASP.NET','Android'],
+    ai: ['Machine Learning','scikit-learn','Data Mining'],
+    network: ['Cisco Networking','Network Management','Cybersecurity','IT Ticketing'],
+    tools: ['Git/GitHub','UI/UX Design','VirtualBox','ServiceNow'],
+    cloud: ['AWS Academy','Windows Server','Active Directory','Virtualization']
+  };
+
+  const categoryOrder = ['programming','ai','network','tools','cloud'];
+  let currentCategory = 0;
+  let currentSkillIndex = 0;
+
+  const screenContent = document.getElementById('screenContent');
+  const laptopAnimation = document.getElementById('laptopAnimation');
+
+  function showSkill(category, skill) {
+    screenContent.innerHTML = `<span class="skill-highlight ${category}">${skill}</span>`;
+    const bubble = screenContent.querySelector('.skill-highlight');
+    setTimeout(() => bubble.style.opacity = 1, 50);
+  }
+
+  // Cycle skills automatically
+  let skillInterval;
+  function startCycling() {
+    skillInterval = setInterval(() => {
+      const cat = categoryOrder[currentCategory];
+      const skillArray = skills[cat];
+      showSkill(cat, skillArray[currentSkillIndex]);
+
+      currentSkillIndex++;
+      if(currentSkillIndex >= skillArray.length) {
+        currentSkillIndex = 0;
+        currentCategory = (currentCategory + 1) % categoryOrder.length;
+      }
+    }, 1500);
+  }
+
+  // Pause cycling on hover
+  laptopAnimation.addEventListener('mouseenter', () => clearInterval(skillInterval));
+  laptopAnimation.addEventListener('mouseleave', startCycling);
+
+  // Start cycling initially
+  startCycling();
+</script>
   <script src="main.js?v=2"></script>
 </body>
 </html>
