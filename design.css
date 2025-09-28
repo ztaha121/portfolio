@@ -376,82 +376,62 @@ body.dark-mode .skill-bubble.cloud { background: #138D75; }
   transition: opacity 0.6s ease, transform 0.6s ease;
 }
 /* ===== Laptop Animation ===== */
+/* ===== Laptop Animation ===== */
 .laptop-animation {
-  width: 300px;
-  max-width: 90%;
-  margin: 2rem auto;
-  perspective: 1000px;
+  width: 400px; /* bigger overall */
+  margin: 2rem auto; /* center horizontally */
+  position: relative;
 }
 
 .laptop-screen {
   width: 100%;
-  height: 180px;
+  height: 250px; /* taller screen */
   background: #111;
-  border-radius: 0.5rem 0.5rem 0 0;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  border-radius: 0.8rem 0.8rem 0 0;
   overflow: hidden;
-  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 .screen-content {
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .skill-highlight {
-  display: inline-block;
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.5s ease;
-  padding: 0.3rem 0.6rem;
-  border-radius: 0.4rem;
-  margin: 0.2rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  background: #336699;
+  color: #fff;
+  font-weight: 600;
   font-size: 1rem;
+  animation: float 3s ease-in-out infinite;
 }
 
-.skill-highlight.programming { background: #336699; }
-.skill-highlight.ai { background: #9B59B6; }
-.skill-highlight.network { background: #27AE60; }
-.skill-highlight.tools { background: #E67E22; }
-.skill-highlight.cloud { background: #16A085; }
-
+/* Base of the laptop */
 .laptop-base {
-  width: 120%;
-  height: 25px;
+  width: 110%;
+  height: 20px;
   background: #222;
-  margin: -5px auto 0;
-  border-radius: 0 0 0.5rem 0.5rem;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
-  transform: rotateX(15deg);
+  border-radius: 0 0 0.8rem 0.8rem;
+  margin: 0 auto;
+  position: relative;
+  top: -5px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
 }
 
-/* Fade-in for skill highlight */
-.skill-highlight.show {
-  opacity: 1 !important;
-  transform: scale(1) !important;
+/* Optional: scale up on larger screens */
+@media (min-width: 1200px) {
+  .laptop-animation { width: 500px; }
+  .laptop-screen { height: 300px; }
+  .skill-highlight { font-size: 1.1rem; padding: 0.7rem 1.2rem; }
 }
 
-/* Dark Mode Laptop */
-body.dark-mode .laptop-screen { background: #222; }
-body.dark-mode .laptop-base { background: #111; }
-body.dark-mode .skill-highlight.programming { background: #224466; }
-body.dark-mode .skill-highlight.ai { background: #7D3C98; }
-body.dark-mode .skill-highlight.network { background: #1E8449; }
-body.dark-mode .skill-highlight.tools { background: #CA6F1E; }
-body.dark-mode .skill-highlight.cloud { background: #138D75; }
-
-/* Responsive Laptop */
-@media(max-width:600px){
-  .laptop-animation { width: 90%; }
-  .laptop-screen { height: 150px; }
-  .screen-content { font-size: 1rem; }
-}
 .filter-buttons button {
   font-family: 'Roboto Slab', sans-serif; /* ensures consistency */
   padding: 0.8rem 1.5rem;
